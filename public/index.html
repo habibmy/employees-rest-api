@@ -1,23 +1,116 @@
+<!doctype html>
 <html>
 
 <head>
-  <title>Express</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rest-Api Employee</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="scribbler-global.css">
+  <link rel="stylesheet" href="scribbler-doc.css">
+  <link rel="author" href="humans.txt">
 </head>
 
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+  <div class="doc__bg"></div>
+  <nav class="header">
+    <h1 class="logo">Rest-Api Employee <span class="logo__thin">Doc</span></h1>
+    <ul class="menu">
+      <div class="menu__item toggle"><span></span></div>
+      <li class="menu__item"><a href="https://github.com/habibmy/employees-rest-api" class="link link--dark"><i
+            class="fa fa-github"></i> Github</a></li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <article class="doc__content">
+      <section class="js-section">
+        <h3 class="section__title">Get Started</h3>
+        <p>This Rest-Api gives json responses about the Employee.</p>
+      </section>
+      <section class="js-section">
+        <h3 class="section__title">Routes</h3>
+        <p>Avialable methods</p>
+        <table id="customers">
+          <tr>
+            <th>Supported Method</th>
+            <th>Endpoint</th>
+            <th>Resource</th>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>
+              <a href="/api">
+                <pre>/api</pre>
+              </a>
+            </td>
+            <td>Retrieve all employees from the database.</td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td>
+              <a href="/api">
+                <pre>/api</pre>
+              </a>
+            </td>
+            <td>Create new Employee. Send Details in Body with Json Format.<br>
+              <b>Example:</b>
+              <pre>
+  {
+  "name": "Habib",
+  "age": 25,
+  "gender": "male",
+  "designation": "Field Executive",
+  "department": "Marketing"
+  }
+</pre>
+            </td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>
+              <a href="/api">
+                <pre>/api/:employeeId</pre>
+              </a>
+            </td>
+            <td>Retrieve single employee from the database.</td>
+          </tr>
+          <tr>
+            <td>PUT</td>
+            <td>
+              <a href="/api">
+                <pre>/api/:employeeId</pre>
+              </a>
+            </td>
+            <td>Update single employee detail in the database. Send the fields to be updated in Body with json
+              formating.<br>
+              <b>Example:</b>
+              <pre>
+  {
+  "age": 32
+  }
+</pre>
+            </td>
+          </tr>
+          <tr>
+            <td>DELETE</td>
+            <td>
+              <a href="/api">
+                <pre>/api/:employeeId</pre>
+              </a>
+            </td>
+            <td>Delete a employee with the specified employeeId in the request</td>
+          </tr>
+        </table>
+      </section>
+    </article>
+  </div>
+
+  <footer class="footer">Made by <a href="https://github.com/habibmy/employees-rest-api" target="_blank"
+      class="link link--light">Habib Siddiqui</a>.</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
-
-<style>
-  body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  }
-
-  a {
-    color: #00B7FF;
-  }
-</style>
 
 </html>
