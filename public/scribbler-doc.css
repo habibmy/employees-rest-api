@@ -17,6 +17,10 @@ body {
   overflow: scroll;
 }
 
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
 /* logo */
 .logo {
   font-weight: 900;
