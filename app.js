@@ -11,12 +11,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-const config = require('./config.js');
+const uri = process.env.DATABASE_URL;
 const mongoose = require('mongoose');
 const { error } = require('console');
 mongoose.Promise = global.Promise;
 
-mongoose.connect(config.url, { useNewUrlParser: true, useUnifiedTopology: true }).then(
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(
     () => { console.log("Database connected successfully "); }
 ).catch(err => {
     console.log('Could not connect to the database.', err);
